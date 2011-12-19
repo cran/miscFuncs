@@ -10,7 +10,7 @@
 roxbc <- function(name){ # roxygenize, build and check a package
     require(roxygen)
     roxygenize(name)
-    out <- system(paste("R CMD build ",name,".roxygen",sep=""),intern=TRUE)
+    out <- system(paste("R CMD build --compact-vignettes=gs ",name,".roxygen",sep=""),intern=TRUE)
     stuff <- out[length(out)]
     if (length(grep("building",stuff))==0){
         system(paste("R CMD build ",name,".roxygen",sep=""))

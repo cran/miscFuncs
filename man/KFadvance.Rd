@@ -2,15 +2,15 @@
 \alias{KFadvance}
 \title{KFadvance function...}
 \usage{KFadvance(obs, oldmean, oldvar, A, B, C, D, E, F, W, V, marglik=FALSE,
-    log=TRUE)}
+    log=TRUE, na.rm=FALSE)}
 \description{KFadvance function}
 \details{A function to compute one step of the Kalman filter. Embed in a loop to run the filter on a set of data.
 
 The model is: (note that Y and theta are COLUMN VECTORS)
 
-theta_t = A%*%theta_{t-1} + B + C%*%W (state equation)
+theta_t = A*theta_{t-1} + B + C*W (state equation)
 
-Y_t = D%*%theta_t + E + F%*%V         (observation equation)
+Y_t = D*theta_t + E + F*V         (observation equation)
 
 W and V are the covariance matrices of the state and observation noise. Prior is normal, 
 
@@ -30,4 +30,5 @@ Result is the posterior, N(mu_t,Sigma_t), together with the likelihood contribut
 \item{W}{state noise covariance}
 \item{V}{observation noise covariance}
 \item{marglik}{logical, whether to return the marginal likelihood contribution from this observation}
-\item{log}{whether or not to return the log of the likelihood contribution.}}
+\item{log}{whether or not to return the log of the likelihood contribution.}
+\item{na.rm}{na.rm logical, whether or not to handle NAs. Defult is FALSE. Set to TRUE if there are any missing values in the observed data.}}

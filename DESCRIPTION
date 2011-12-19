@@ -6,13 +6,14 @@ Type: Package
 LazyLoad: yes
 Author: Benjamin M. Taylor
 Description: LaTeX tables, Kalman filter, web scraping, development
-    tools
-Version: 1.0
+        tools
+Version: 1.2
+Packaged: 2012-06-14 12:33:32 UTC; taylorb1
 Date: 2011-12-19
 Depends: mvtnorm, roxygen
-Collate: 'bin.R' 'generic.R' 'getstrbetween.R' 'getwikicoords.R'
-        'KFadvanceAR2.R' 'KFadvance.R' 'latextable.R' 'method.R'
-        'roxbc.R' 'roxtext.R' 'timeop.R' 'vdc.R'
-Packaged: 2011-12-19 20:16:41 UTC; taylorb1
+Collate: 'bin.R' 'EKFadvance.R' 'generic.R' 'getstrbetween.R'
+        'getwikicoords.R' 'KFadvanceAR2.R' 'KFadvance.R'
+        'KFtemplates.R' 'latextable.R' 'method.R' 'roxbc.R' 'roxtext.R'
+        'timeop.R' 'vdc.R' 'zzz.R'
 Repository: CRAN
-Date/Publication: 2011-12-20 07:24:14
+Date/Publication: 2012-06-14 15:10:22

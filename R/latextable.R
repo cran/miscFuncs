@@ -20,7 +20,7 @@
 latextable <- function(x,dp=3,colnames=NULL,rownames=NULL,caption=NULL,narep=" ",laststr=""){
 	d <- dim(x)
 	write("","")
-	write("\\begin{table}","")
+	write("\\begin{table}[htbp]","")
 	write("    \\centering","")
 	if(!is.null(caption)){write(paste("    \\caption{",caption,"}",sep=""),"")}
 	cs <- "    \\begin{tabular}{"
