@@ -8,7 +8,7 @@
 ##' @export
 
 roxbc <- function(name){ # roxygenize, build and check a package
-    require(roxygen2)
+
     roxygenize(name,roxygen.dir=paste(name,".roxygen",sep=""))
     out <- system(paste("R CMD build --compact-vignettes=gs ",name,".roxygen",sep=""),intern=TRUE)
     stuff <- out[length(out)]

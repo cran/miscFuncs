@@ -1,0 +1,24 @@
+\name{latexformat}
+\alias{latexformat}
+\title{latexformat function}
+\usage{
+  latexformat(x, digits = 3, scientific = -3, ...)
+}
+\arguments{
+  \item{x}{a numeric, or character}
+
+  \item{digits}{see ?format}
+
+  \item{scientific}{see ?format}
+
+  \item{...}{other arguments to pass to the function
+  format}
+}
+\value{
+  ...
+}
+\description{
+  A function to format text or numeric variables using
+  scientific notation for LaTeX documents.
+}
+

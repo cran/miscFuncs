@@ -7,7 +7,7 @@
 ##' @export
 
 KFtemplates <- function(){
-    path <- file.path(find.package("miscFuncs", lib.loc=NULL, quiet = TRUE),"doc")
+    path <- file.path(find.package("miscFuncs", lib.loc=NULL, quiet = TRUE),"inst")
     fitpath <- file.path(path,"KFfit.R")
     parpath <- file.path(path,"KFparest.R")
     

@@ -17,8 +17,6 @@
 ##' @export
 EKFadvance <- function(obs,oldmean,oldvar,phi,phi.arglist,psi,psi.arglist,W,V,loglik=FALSE,na.rm=FALSE){ # phi==phi(Theta_t-1,W_t) but specified as phi(Theta_t-1) since only ever evaluate phi(Theta_t-1,0) ... similar for psi 
 
-    require(mvtnorm)
-
     s <- phi(oldmean,phi.arglist) # s = system equation bits
     if(is.null(s$higherorder)){
         s$higherorder <- list(mean=0,var=0)

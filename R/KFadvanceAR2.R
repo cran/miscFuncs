@@ -35,7 +35,7 @@
 ##' @return list containing the new mean and variance, and if specified, the likelihood
 ##' @export
 KFadvanceAR2 <- function(obs,oldmean,oldermean,oldvar,oldervar,A,A1,B,C,D,E,F,W,V,marglik=FALSE,log=TRUE,na.rm=FALSE){
-    require(mvtnorm)
+
     if(na.rm){
         if(any(is.na(obs))){
             if(all(is.na(obs))){
