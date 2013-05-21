@@ -7,17 +7,34 @@
 ##'
 ##' Just copy and paste the results into your LaTeX document.
 ##'
-##' @param x a matrix, can include mixed character and numeric entries 
-##' @param dp number of decimal places
+##' @param x a matrix, or object that can be coerced to a matrix. x can include mixed character and numeric entries. 
+##' @param digits see help file for format
+##' @param scientific see help file for format
 ##' @param colnames optional column names
 ##' @param rownames optional row names
 ##' @param caption optional caption, not normally used
 ##' @param narep string giving replacement for NA entries in the matrix
 ##' @param laststr string to write at end, eg note the double backslash!!
+##' @param ... additional arguments passed to format
 ##' @return prints the LaTeX table to screen, so it can be copied into reports
 ##' @export
 
-latextable <- function(x,dp=3,colnames=NULL,rownames=NULL,caption=NULL,narep=" ",laststr=""){
+latextable <- function(x,digits=3,scientific=-3,colnames=NULL,rownames=NULL,caption=NULL,narep=" ",laststr="",...){
+
+    x <- as.matrix(x)
+
+    form <- function(x,...){
+        if(is.character(x)){
+            x <- as.numeric(x)
+        }
+        xtxt <- format(x,digits=digits,scientific=scientific,...)
+        if(length(grep("e",xtxt))>0){
+            spl <- unlist(strsplit(xtxt,"e"))
+            xtxt <- paste(spl[1],"$\\times10^{",as.character(as.numeric(spl[2])),"}$",sep="")
+        }    
+        return(xtxt)
+    }
+
 	d <- dim(x)
 	write("","")
 	write("\\begin{table}[htbp]","")
@@ -44,7 +61,7 @@ latextable <- function(x,dp=3,colnames=NULL,rownames=NULL,caption=NULL,narep=" "
 				towrite <- paste("        ",rownames[i]," & ",narep," & ",sep="")
 			}
 			else if (is.numeric(x[i,1])){
-				towrite <- paste("        ",rownames[i]," & ",round(x[i,1],dp)," & ",sep="")
+				towrite <- paste("        ",rownames[i]," & ",form(x[i,1])," & ",sep="")
 			}
 			else{
 				towrite <- paste("        ",rownames[i]," & ",x[i,1]," & ",sep="")
@@ -55,7 +72,7 @@ latextable <- function(x,dp=3,colnames=NULL,rownames=NULL,caption=NULL,narep=" "
 				towrite <- paste("        ",narep," & ",sep="")
 			}
 			else if (is.numeric(x[i,1])){
-				towrite <- paste("        ",round(x[i,1],dp)," & ",sep="")
+				towrite <- paste("        ",form(x[i,1])," & ",sep="")
 			}
 			else{
 				towrite <- paste("        ",x[i,1]," & ",sep="")
@@ -67,22 +84,7 @@ latextable <- function(x,dp=3,colnames=NULL,rownames=NULL,caption=NULL,narep=" "
 					towrite <- paste(towrite,narep," & ",sep="")
 				}
 				else if (!is.na(as.numeric(x[i,j]))){
-					if (round(as.numeric(x[i,j]),dp)==0){
-						if (as.numeric(x[i,j])==0){								
-							towrite <- paste(towrite,"0 & ",sep="")
-						}
-						else{
-							ii <- dp + 1
-							while (round(as.numeric(x[i,j]),ii)==0){
-								ii <- ii + 1
-							}
-							temptr <- round(as.numeric(x[i,j]),ii+dp) * 10^ii
-							towrite <- paste(towrite,paste("$",temptr,"\\","times10^{-",ii,"}$",sep="")," & ",sep="")
-						}			
-					}
-					else{
-						towrite <- paste(towrite,paste(round(as.numeric(x[i,j]),dp))," & ",sep="")
-					}
+					towrite <- paste(towrite,form(x[i,j])," & ",sep="")
 				} 
 				else{
 					towrite <- paste(towrite,x[i,j]," & ",sep="")
@@ -93,22 +95,7 @@ latextable <- function(x,dp=3,colnames=NULL,rownames=NULL,caption=NULL,narep=" "
 			towrite <- paste(towrite,narep," \\\\",sep="")
 		}
 		else if (!is.na(as.numeric(x[i,d[2]]))){
-			if (round(as.numeric(x[i,d[2]]),dp)==0){
-				if (as.numeric(x[i,d[2]])==0){								
-					towrite <- paste(towrite,"0 \\\\ ",sep="")
-				}
-				else{
-					ii <- dp + 1
-					while (round(as.numeric(x[i,d[2]]),ii)==0){
-						ii <- ii + 1
-					}
-					temptr <- round(as.numeric(x[i,d[2]]),ii+dp) * 10^ii
-					towrite <- paste(towrite,paste("$",temptr,"\\","times10^{-",ii,"}$ \\\\",sep=""),sep="")
-				}	
-			}
-			else{
-				towrite <- paste(towrite,paste(round(as.numeric(x[i,d[2]]),dp)," \\\\"),sep="")
-			}
+			towrite <- paste(towrite,form(x[i,d[2]])," \\\\",sep="")
 		}
 		else{
 			towrite <- paste(towrite,x[i,d[2]]," \\\\",sep="")

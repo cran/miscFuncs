@@ -1,6 +1,6 @@
-%\VignettePackage{lgcp} 
-%\VignetteKeyword{Langevin algorithm, log-Gaussian Cox Process, MCMC, spatiotemporal prediction}
-%\VignetteIndexEntry{lgcp} 
+%\VignettePackage{miscFuncs} 
+%\VignetteKeyword{LaTeX tables, Kalman filter, web scraping, development tools}
+%\VignetteIndexEntry{miscFuncs} 
 
 \documentclass[nojss]{jss}
 
@@ -63,7 +63,7 @@ This vignette provides a program template for use with the \code{KFadvance} func
    LA1 4YF,\\
    UK\\
    E-mail: \email{b.taylor1@lancaster.ac.uk}\\
-   URL: \url{http://www.maths.lancs.ac.uk/~taylorb1/}
+   URL: \url{http://www.lancs.ac.uk/staff/taylorb1/}
 
 }
 %% It is also possible to add a telephone and fax number

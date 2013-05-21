@@ -25,12 +25,12 @@ roxtext <- function(s){ # s a string
     cat("##'\n")
     for (a in arglist){
         if(length(grep("=",a))==0){
-            cat("##' @param ",a," \n",sep="")
+            cat("##' @param ",a," X \n",sep="")
         }
         else{
             x <- unlist(strsplit(a,"="))[1]
             x <- gsub(" ","",x)
-            cat("##' @param ",x," \n",sep="")
+            cat("##' @param ",x," X \n",sep="")
         }
     }
     cat("##' @return ...\n")
