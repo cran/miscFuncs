@@ -9,11 +9,11 @@
 
 roxbc <- function(name){ # roxygenize, build and check a package
 
-    roxygenize(name,roxygen.dir=paste(name,".roxygen",sep=""))
-    out <- system(paste("R CMD build --compact-vignettes=gs ",name,".roxygen",sep=""),intern=TRUE)
+    roxygenize(name)
+    out <- system(paste("R CMD build --compact-vignettes=gs ",name,sep=""),intern=TRUE)
     stuff <- out[length(out)]
     if (length(grep("building",stuff))==0){
-        system(paste("R CMD build ",name,".roxygen",sep=""))
+        system(paste("R CMD build ",name,sep=""))
         stop("Error in building")
     }
     else{

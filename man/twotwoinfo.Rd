@@ -2,9 +2,9 @@
 \alias{twotwoinfo}
 \title{twotwoinfo function}
 \usage{
-  twotwoinfo(e1 = NA, u1 = NA, o1t = NA, e2 = NA, u2 = NA,
-    o2t = NA, et = NA, ut = NA, T = NA, lev = 0.95,
-    LaTeX = TRUE, digits = 3, scientific = -3, ...)
+twotwoinfo(e1 = NA, u1 = NA, o1t = NA, e2 = NA, u2 = NA, o2t = NA,
+  et = NA, ut = NA, T = NA, lev = 0.95, LaTeX = TRUE, digits = 3,
+  scientific = -3, ...)
 }
 \arguments{
   \item{e1}{type print22() at the console}
@@ -39,20 +39,20 @@
   \item{...}{other arguments passed to function format}
 }
 \value{
-  Computes odds ratios and relative risks together with
-  confidence intervals for 2 by 2 table and prints to
-  screen in LaTeX format.
+Computes odds ratios and relative risks together with
+confidence intervals for 2 by 2 table and prints to screen
+in LaTeX format.
 }
 \description{
-  A function to compute and diplay information about 2 by 2
-  tables for copying into LaTeX documents. Computes odds
-  ratios and relative risks together with confidence
-  intervals for 2 by 2 table and prints to screen in LaTeX
-  format. The funciton will try to fill in any missing
-  values from the 2 by 2 table. Type print22() at the
-  console to see what each argument refers to.
+A function to compute and diplay information about 2 by 2
+tables for copying into LaTeX documents. Computes odds
+ratios and relative risks together with confidence
+intervals for 2 by 2 table and prints to screen in LaTeX
+format. The funciton will try to fill in any missing values
+from the 2 by 2 table. Type print22() at the console to see
+what each argument refers to.
 }
 \seealso{
-  \link{print22}
+\link{print22}
 }
 

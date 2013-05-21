@@ -2,17 +2,17 @@
 \alias{print22}
 \title{print22 function}
 \usage{
-  print22()
+print22()
 }
 \value{
-  prints the names of the arguments of twotwofunction info
-  to screen in their correct place in the 2 by 2 table
+prints the names of the arguments of twotwofunction info to
+screen in their correct place in the 2 by 2 table
 }
 \description{
-  A function to print details of the 2 by 2 table for use
-  with the function twotwoinfo.
+A function to print details of the 2 by 2 table for use
+with the function twotwoinfo.
 }
 \seealso{
-  \link{twotwoinfo}
+\link{twotwoinfo}
 }
 

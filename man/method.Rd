@@ -2,7 +2,7 @@
 \alias{method}
 \title{method function}
 \usage{
-  method(meth, gen, oname = "obj")
+method(meth, gen, oname = "obj")
 }
 \arguments{
   \item{meth}{character, the name of the method}
@@ -12,11 +12,11 @@
   \item{oname}{name of object}
 }
 \value{
-  a roxygen template for the method.
+a roxygen template for the method.
 }
 \description{
-  A function to generate a roxygen template for a method of
-  a generic S3 function. Normally, this would be called
-  from the function generic, see ?generic
+A function to generate a roxygen template for a method of a
+generic S3 function. Normally, this would be called from
+the function generic, see ?generic
 }
 

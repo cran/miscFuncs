@@ -2,16 +2,16 @@
 \alias{vdc}
 \title{vdc function}
 \usage{
-  vdc(n)
+vdc(n)
 }
 \arguments{
   \item{n}{the length of the sequence}
 }
 \value{
-  Van der Corput sequence of length n
+Van der Corput sequence of length n
 }
 \description{
-  A function to generate a Van der Corput sequence of
-  numbers.
+A function to generate a Van der Corput sequence of
+numbers.
 }
 

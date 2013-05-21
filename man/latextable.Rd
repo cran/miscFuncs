@@ -2,9 +2,8 @@
 \alias{latextable}
 \title{latextable function}
 \usage{
-  latextable(x, digits = 3, scientific = -3,
-    colnames = NULL, rownames = NULL, caption = NULL,
-    narep = " ", laststr = "", ...)
+latextable(x, digits = 3, scientific = -3, colnames = NULL,
+  rownames = NULL, caption = NULL, narep = " ", laststr = "", ...)
 }
 \arguments{
   \item{x}{a matrix, or object that can be coerced to a
@@ -30,17 +29,17 @@
   \item{...}{additional arguments passed to format}
 }
 \value{
-  prints the LaTeX table to screen, so it can be copied
-  into reports
+prints the LaTeX table to screen, so it can be copied into
+reports
 }
 \description{
-  A very useful function to create a LaTeX table from a
-  matrix. Rounds numeric entries and also replaces small
-  numbers with standard index form equivalents.
+A very useful function to create a LaTeX table from a
+matrix. Rounds numeric entries and also replaces small
+numbers with standard index form equivalents.
 }
 \details{
-  To get a backslash to appear, use a double backslash
+To get a backslash to appear, use a double backslash
 
-  Just copy and paste the results into your LaTeX document.
+Just copy and paste the results into your LaTeX document.
 }
 

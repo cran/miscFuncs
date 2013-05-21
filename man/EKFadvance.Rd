@@ -2,8 +2,8 @@
 \alias{EKFadvance}
 \title{EKFadvance function}
 \usage{
-  EKFadvance(obs, oldmean, oldvar, phi, phi.arglist, psi,
-    psi.arglist, W, V, loglik = FALSE, na.rm = FALSE)
+EKFadvance(obs, oldmean, oldvar, phi, phi.arglist, psi, psi.arglist, W, V,
+  loglik = FALSE, na.rm = FALSE)
 }
 \arguments{
   \item{obs}{observations}
@@ -36,11 +36,11 @@
   values in the observed data.}
 }
 \value{
-  list containing the new mean and variance, and if
-  specified, the likelihood
+list containing the new mean and variance, and if
+specified, the likelihood
 }
 \description{
-  A function to perform one iteration of ther EKF.
-  Currently UNDER DEVELOPMENT.
+A function to perform one iteration of ther EKF. Currently
+UNDER DEVELOPMENT.
 }
 

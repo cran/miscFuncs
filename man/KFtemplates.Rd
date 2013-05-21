@@ -2,14 +2,14 @@
 \alias{KFtemplates}
 \title{KFtemplates function}
 \usage{
-  KFtemplates()
+KFtemplates()
 }
 \value{
-  Tust prints to the console. This can be copied and pasted
-  into a text editor for further manipulation.
+Tust prints to the console. This can be copied and pasted
+into a text editor for further manipulation.
 }
 \description{
-  A function to print KFfit and KFparest templates to the
-  console. See vignette("miscFuncs") for more information
+A function to print KFfit and KFparest templates to the
+console. See vignette("miscFuncs") for more information
 }
 

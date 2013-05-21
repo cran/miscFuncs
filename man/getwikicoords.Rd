@@ -2,7 +2,7 @@
 \alias{getwikicoords}
 \title{getwikicoords function}
 \usage{
-  getwikicoords(place, county = NULL, rmslash = TRUE)
+getwikicoords(place, county = NULL, rmslash = TRUE)
 }
 \arguments{
   \item{place}{character, ther name of the town}
@@ -13,11 +13,11 @@
   used.}
 }
 \value{
-  The lat/lon coordinates from Wikipedia
+The lat/lon coordinates from Wikipedia
 }
 \description{
-  A function to return the lat/lon coordinates of towns in
-  the UK from Wikipedia. Does not always work. Sometimes
-  the county has to be specified too.
+A function to return the lat/lon coordinates of towns in
+the UK from Wikipedia. Does not always work. Sometimes the
+county has to be specified too.
 }
 

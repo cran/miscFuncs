@@ -2,8 +2,8 @@
 \alias{KFadvance}
 \title{KFadvance function}
 \usage{
-  KFadvance(obs, oldmean, oldvar, A, B, C, D, E, F, W, V,
-    marglik = FALSE, log = TRUE, na.rm = FALSE)
+KFadvance(obs, oldmean, oldvar, A, B, C, D, E, F, W, V, marglik = FALSE,
+  log = TRUE, na.rm = FALSE)
 }
 \arguments{
   \item{obs}{Y_t}
@@ -39,26 +39,26 @@
   values in the observed data.}
 }
 \value{
-  list containing the new mean and variance, and if
-  specified, the likelihood
+list containing the new mean and variance, and if
+specified, the likelihood
 }
 \description{
-  A function to compute one step of the Kalman filter.
-  Embed in a loop to run the filter on a set of data.
+A function to compute one step of the Kalman filter. Embed
+in a loop to run the filter on a set of data.
 }
 \details{
-  The model is: (note that Y and theta are COLUMN VECTORS)
+The model is: (note that Y and theta are COLUMN VECTORS)
 
-  theta_t = A*theta_{t-1} + B + C*W (state equation)
+theta_t = A*theta_{t-1} + B + C*W (state equation)
 
-  Y_t = D*theta_t + E + F*V (observation equation)
+Y_t = D*theta_t + E + F*V (observation equation)
 
-  W and V are the covariance matrices of the state and
-  observation noise. Prior is normal,
+W and V are the covariance matrices of the state and
+observation noise. Prior is normal,
 
-  N(mu_{t-1},Sigma_{t-1})
+N(mu_{t-1},Sigma_{t-1})
 
-  Result is the posterior, N(mu_t,Sigma_t), together with
-  the likelihood contribution Prob(Y_t|Y_{t-1})
+Result is the posterior, N(mu_t,Sigma_t), together with the
+likelihood contribution Prob(Y_t|Y_{t-1})
 }
 

@@ -2,8 +2,7 @@
 \alias{getstrbetween}
 \title{getstrbetween function}
 \usage{
-  getstrbetween(linedata, start, startmark, endmark,
-    include = FALSE)
+getstrbetween(linedata, start, startmark, endmark, include = FALSE)
 }
 \arguments{
   \item{linedata}{a string}
@@ -19,11 +18,11 @@
   \item{include}{include the start and end marks?}
 }
 \value{
-  the first string after start and between the start and
-  end marks
+the first string after start and between the start and end
+marks
 }
 \description{
-  A function used in web scraping. Used to simplify the
-  searching of HTML strings for information.
+A function used in web scraping. Used to simplify the
+searching of HTML strings for information.
 }
 

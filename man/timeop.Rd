@@ -2,15 +2,15 @@
 \alias{timeop}
 \title{timeop function}
 \usage{
-  timeop(expr)
+timeop(expr)
 }
 \arguments{
   \item{expr}{an expression to evaluate}
 }
 \value{
-  The time it took to evaluate the expression in seconds
+The time it took to evaluate the expression in seconds
 }
 \description{
-  A function to time an operation in R
+A function to time an operation in R
 }
 
