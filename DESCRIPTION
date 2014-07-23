@@ -7,10 +7,10 @@ LazyLoad: yes
 Author: Benjamin M. Taylor
 Description: LaTeX tables, Kalman filter, web scraping, development tools,
     relative risk, odds ratio
-Version: 1.2-4
-Date: 2013-05-21
+Version: 1.2-6
+Date: 2014-07-23
 Depends: roxygen2, mvtnorm
-Packaged: 2013-12-14 10:59:58 UTC; taylorb1
+Packaged: 2014-07-23 10:51:54 UTC; taylorb1
 NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2013-12-14 12:19:41
+Date/Publication: 2014-07-23 15:24:39

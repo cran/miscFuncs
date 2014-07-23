@@ -10,8 +10,8 @@
 ##' @param x a matrix, or object that can be coerced to a matrix. x can include mixed character and numeric entries. 
 ##' @param digits see help file for format
 ##' @param scientific see help file for format
-##' @param colnames optional column names
-##' @param rownames optional row names
+##' @param colnames optional column names set to NULL (default) to automatically use column names of x. NOTE! if rownames is not NULL present, colnames must include an entry for the rownames i.e. it should be a vector of length the number of columns of x plus 1.
+##' @param rownames optional row names set to NULL (default) to automatically use row names of x
 ##' @param caption optional caption, not normally used
 ##' @param narep string giving replacement for NA entries in the matrix
 ##' @param laststr string to write at end, eg note the double backslash!!
@@ -22,6 +22,15 @@
 latextable <- function(x,digits=3,scientific=-3,colnames=NULL,rownames=NULL,caption=NULL,narep=" ",laststr="",...){
 
     x <- as.matrix(x)
+
+    if(is.null(colnames)){
+        colnames <- c("",colnames(x))
+    }
+    if(is.null(rownames)){
+        rownames <- rownames(x)
+    }
+    
+
 
     form <- function(x,...){
         if(is.character(x)){
