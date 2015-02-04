@@ -1,5 +1,9 @@
 %\VignettePackage{miscFuncs} 
-%\VignetteKeyword{LaTeX tables, Kalman filter, web scraping, development tools}
+%\VignetteKeyword{LaTeX tables}
+%\VignetteKeyword{Kalman filter}
+%\VignetteKeyword{web scraping}
+%\VignetteKeyword{development tools}
+%\VignetteKeyword{2 by 2 tables}
 %\VignetteIndexEntry{miscFuncs} 
 
 \documentclass[nojss]{jss}
