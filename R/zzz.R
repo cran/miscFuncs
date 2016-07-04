@@ -9,6 +9,8 @@
 ##' @return ...
 ##' @export
 
+##' @importFrom stats dnorm qnorm
+
 .onAttach <- function(libname, pkgname)
 {
 	packageStartupMessage("\n Welcome to 'miscFuncs', B. Taylor. \n type 'vignette(\"miscFuncs\")' For help with Kalman Filtering.", appendLF=T)

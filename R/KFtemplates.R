@@ -7,9 +7,9 @@
 ##' @export
 
 KFtemplates <- function(){
-    path <- file.path(find.package("miscFuncs", lib.loc=NULL, quiet = TRUE),"inst")
-    fitpath <- file.path(path,"KFfit.R")
-    parpath <- file.path(path,"KFparest.R")
+    #path <- file.path(find.package("miscFuncs", lib.loc=NULL, quiet = TRUE),"inst")
+    fitpath <- system.file("templates/KFfit.R", package="miscFuncs") #file.path(path,"KFfit.R")
+    parpath <- system.file("templates/KFparest.R", package="miscFuncs") #file.path(path,"KFparest.R")
     
     l <- readLines(fitpath)
     for(i in 1:length(l)){

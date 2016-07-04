@@ -10,9 +10,9 @@
 roxbc <- function(name,checkflags="--as-cran"){ # roxygenize, build and check a package
 
     roxygenize(name)
-    out <- system(paste("R CMD build --compact-vignettes=gs ",name,sep=""),intern=TRUE)
+    out <- system(paste("R CMD build --compact-vignettes=gs --resave-data ",name,sep=""),intern=TRUE)
     stuff <- out[length(out)]
-    if (length(grep("building",stuff))==0){
+    if (length(grep("building",stuff))==0){ 
         system(paste("R CMD build ",name,sep=""))
         stop("Error in building")
     }
@@ -34,7 +34,7 @@ roxbc <- function(name,checkflags="--as-cran"){ # roxygenize, build and check a 
 roxbuild <- function(name){ # roxygenize, build and check a package
 
     roxygenize(name)
-    out <- system(paste("R CMD build --compact-vignettes=gs ",name,sep=""),intern=TRUE)
+    out <- system(paste("R CMD build --compact-vignettes=gs --resave-data ",name,sep=""),intern=TRUE)
     stuff <- out[length(out)]
     if (length(grep("building",stuff))==0){
         system(paste("R CMD build ",name,sep=""))

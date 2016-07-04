@@ -51,33 +51,49 @@ KFadvance <- function(obs,oldmean,oldvar,A,B,C,D,E,F,W,V,marglik=FALSE,log=TRUE,
             }
         }
     }
-	T <- A%*%oldmean + B
-	S <- A%*%oldvar%*%t(A) + C%*%W%*%t(C)
-	K <- D%*%S%*%t(D) + F%*%V%*%t(F)
-	if (marglik==TRUE){
-		margmean <- D %*% T + E
-		if (all(dim(K)==1)){
-			newmean <- T + as.numeric(1/K)*S%*%t(D)%*%(obs-margmean)
-			newvar <- S - as.numeric(1/K)*S%*%t(D)%*%D%*%S
+	T <- A %*% oldmean + B
+	S <- A %*% oldvar %*% t(A) + C %*% W %*% t(C)
+    thing1 <- D %*% S
+    tD <- t(D)
+	K <- thing1 %*% tD + F %*% V %*% t(F)
+    
+    margmean <- D %*% T + E
+    resid <- obs-margmean
+	
+    if (marglik==TRUE){		
+		if (all(dim(K)==1)){ 
+            thing2 <- S %*% tD           
+			newmean <- T + as.numeric(1/K)* thing2 %*% resid
+			newvar <- S - as.numeric(1/K)*thing2 %*% thing1
 			marginal <- dnorm(obs,as.numeric(margmean),sqrt(as.numeric(K)),log=log)
 		}
 		else{
 			Kinv <- solve(K)
-			newmean <- T + S%*%t(D)%*%Kinv%*%(obs-margmean)
-			newvar <- S - S%*%t(D)%*%Kinv%*%D%*%S
-			marginal <- dmvnorm(as.vector(obs),as.vector(margmean),K,log=log)
+            thing3 <- tD %*% Kinv
+            thing4 <- S %*% thing3
+			newmean <- T + thing4 %*% resid
+			newvar <- S - thing4 %*% thing1
+            if(log){
+    			marginal <- (-1/2)*t(resid) %*% Kinv %*% resid # does not include constant of proportionality
+            }
+            else{
+                marginal <- dmvnorm(as.vector(obs),as.vector(margmean),K,log=log)
+            }
 		}
 		return(list(mean=newmean,var=newvar,mlik=marginal))
 	}
 	else{
 		if (all(dim(K)==1)){
-			newmean <- T + as.numeric(1/K)*S%*%t(D)%*%(obs-D%*%T-E)
-			newvar <- S - as.numeric(1/K)*S%*%t(D)%*%D%*%S
+            thing2 <- S %*% tD           
+			newmean <- T + as.numeric(1/K) * thing2 %*% resid
+			newvar <- S - as.numeric(1/K) * thing2 %*% thing1
 		}
 		else{
 			Kinv <- solve(K)
-			newmean <- T + S%*%t(D)%*%Kinv%*%(obs-D%*%T-E)
-			newvar <- S - S%*%t(D)%*%Kinv%*%D%*%S
+            thing3 <- tD %*% Kinv
+            thing4 <- S %*% thing3
+			newmean <- T + thing4 %*% resid
+			newvar <- S - thing4 %*% thing1
 		}
 		return(list(mean=newmean,var=newvar))
 	}

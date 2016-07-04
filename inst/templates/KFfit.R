@@ -14,7 +14,7 @@ KFfit <- function(  param,              # model parameters
         		    se.fit=FALSE,       # whether to return the standard error of the fitted values
         		    se.predict=FALSE,   # whether to return the prediction standard error =
         		                        #     se(fitted values) + observation variance V_t
-        		    noisy=TRUE          # whether to print a progress bar, useful.
+        		    noisy=TRUE,         # whether to print a progress bar, useful.
         		    na.rm=FALSE){       # whether to use NA handling. set to TRUE if any Y is NA 
 		  
     start <- Sys.time()  
