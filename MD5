@@ -1,4 +1,4 @@
-4482a2ad1423915db52bd589116fecaa *DESCRIPTION
+18764257c19891734ac648f928c741c3 *DESCRIPTION
 0830c4e624c57e5c267df8715cf6e109 *NAMESPACE
 ce07383ff7d6d031d7c7d7f9e237c3e3 *R/22tables.R
 3d7ed2a78c4eb4f8c8cd860aa402cca8 *R/EKFadvance.R
@@ -10,7 +10,7 @@ cbd66e93886ec08818dcd809d8dc0ae5 *R/KFtemplates.R
 965f50e4939f068f4cfd9a35684c8a02 *R/getstrbetween.R
 347cce36892a93c3c18324091d5b0af2 *R/getwikicoords.R
 d445567e7d7fc2bd3b42922d79307d07 *R/kalman_functions.R
-a246918e56214069232a4514267a3ea4 *R/latextable.R
+ea6f09e1cce9c2763fcc905c47d4805e *R/latextable.R
 4024a84e4c3a58f52e97f88c9c50e06e *R/method.R
 c257067a14f82e7fd7a2b6c5948f8885 *R/roxbc.R
 eca4e10cedab1943f4352f2a6ecb23d5 *R/roxtext.R
@@ -19,7 +19,7 @@ eca4e10cedab1943f4352f2a6ecb23d5 *R/roxtext.R
 9f893002985af4c52efd8f421b97f62e *R/zzz.R
 fd8567de39deea535f62cd87595f514f *build/vignette.rds
 d920b233a39c1fbbbc967f051c0b9fe1 *inst/doc/miscFuncs.Rtex
-8139a7103701d80ae3c4ade390a677a2 *inst/doc/miscFuncs.pdf
+e72caff61c20de9cd610745f51eec0db *inst/doc/miscFuncs.pdf
 6c8518292fe10d90e7d89b352486adc8 *inst/templates/KFfit.R
 ee9ec88d62df40ed28a122aae50a9939 *inst/templates/KFparest.R
 2fd2fe9640ce0ae11ea310866d5cf57b *man/EKFadvance.Rd

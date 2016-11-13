@@ -24,7 +24,9 @@ latextable <- function(x,digits=3,scientific=-3,colnames=NULL,rownames=NULL,capt
 
     x <- as.matrix(x)
 
+    trigger <- TRUE # colnames is not null
     if(is.null(colnames)){
+        trigger <- FALSE
         colnames <- c("",colnames(x))
     }
     if(is.null(rownames)){
@@ -51,20 +53,46 @@ latextable <- function(x,digits=3,scientific=-3,colnames=NULL,rownames=NULL,capt
 	write("    \\centering","")
 	if(!is.null(caption)){write(paste("    \\caption{",caption,"}",sep=""),"")}
 	cs <- "    \\begin{tabular}{"
-	cn <- ""
+
+    cn <- ""
 	times <- d[2]
-	if(!is.null(rownames)){times <- times + 1}
-	for (i in 1:times){
+    strt <- 1
+    en <- times
+	if(!is.null(rownames)){
+        times <- times + 1
+        en <- times
+    }
+    else{
+        strt <- 2
+        en <- times + 1
+    }
+
+    if(trigger){
+        strt <- 1
+        en <- d[2]
+    }
+	for (i in strt:en){
 		cs <- paste(cs,"c",sep="")
-		if (i<times){cn <- paste(cn,colnames[i]," & ",sep="")}
+		if (i<en){
+            if(!all(colnames=="")){
+                cn <- paste(cn,colnames[i]," & ",sep="")
+            }
+        }
 	}
 	cs <- paste(cs,"}",sep="")
-	cn <- paste(cn,colnames[times]," \\\\ \\hline",sep="")
+    if(!all(colnames=="")){
+    	cn <- paste(cn,colnames[en]," \\\\ \\hline",sep="")
+    }
 	write(cs,"")
 	if(!is.null(colnames)){
-		if (!any(length(colnames)==c(d[2],d[2]+1))){stop("Incorrect number of column names")}
-		write(paste("        ",cn),"")
+        if(!all(colnames=="")){
+    		if (!any(length(colnames)==c(d[2],d[2]+1))){
+                stop("Incorrect number of column names")
+            }
+    		write(paste("        ",cn),"")
+        }
 	}
+
 	for (i in 1:d[1]){
 		if (!is.null(rownames)){
 			if (is.na(x[i,1])){
