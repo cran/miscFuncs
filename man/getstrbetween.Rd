@@ -23,4 +23,3 @@ the first string after start and between the start and end marks
 \description{
 A function used in web scraping. Used to simplify the searching of HTML strings for information.
 }
-

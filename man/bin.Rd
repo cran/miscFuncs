@@ -15,4 +15,3 @@ the binary representation stored in a vector.
 \description{
 A function to convert decimal to binary
 }
-

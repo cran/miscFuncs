@@ -4,8 +4,25 @@
 \alias{KFadvanceAR2}
 \title{KFadvanceAR2 function}
 \usage{
-KFadvanceAR2(obs, oldmean, oldermean, oldvar, oldervar, A, A1, B, C, D, E, F, W,
-  V, marglik = FALSE, log = TRUE, na.rm = FALSE)
+KFadvanceAR2(
+  obs,
+  oldmean,
+  oldermean,
+  oldvar,
+  oldervar,
+  A,
+  A1,
+  B,
+  C,
+  D,
+  E,
+  F,
+  W,
+  V,
+  marglik = FALSE,
+  log = TRUE,
+  na.rm = FALSE
+)
 }
 \arguments{
 \item{obs}{Y_t}
@@ -56,10 +73,9 @@ theta_t = A*theta_{t-1} + A1*theta_{t-2} + B + C*W (state equation)
 
 Y_t = D*theta_t + E + F*V         (observation equation)
 
-W and V are the covariance matrices of the state and observation noise. Priors are normal,
+W and V are the covariance matrices of the state and observation noise. Priors are normal, 
 
 N(mu_{t-1},Sigma_{t-1}) and N(mu_{t-2},Sigma_{t-2})
 
 Result is the posterior, N(mu_t,Sigma_t), together with the likelihood contribution Prob(Y_t|Y_{t-1})
 }
-

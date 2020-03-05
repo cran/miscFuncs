@@ -15,4 +15,3 @@ A function to print details of the 2 by 2 table for use with the function twotwo
 \seealso{
 \link{twotwoinfo}
 }
-

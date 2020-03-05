@@ -4,9 +4,22 @@
 \alias{twotwoinfo}
 \title{twotwoinfo function}
 \usage{
-twotwoinfo(e1 = NA, u1 = NA, o1t = NA, e2 = NA, u2 = NA, o2t = NA,
-  et = NA, ut = NA, T = NA, lev = 0.95, LaTeX = TRUE, digits = 3,
-  scientific = -3, ...)
+twotwoinfo(
+  e1 = NA,
+  u1 = NA,
+  o1t = NA,
+  e2 = NA,
+  u2 = NA,
+  o2t = NA,
+  et = NA,
+  ut = NA,
+  T = NA,
+  lev = 0.95,
+  LaTeX = TRUE,
+  digits = 3,
+  scientific = -3,
+  ...
+)
 }
 \arguments{
 \item{e1}{type print22() at the console}
@@ -48,4 +61,3 @@ missing values from the 2 by 2 table. Type print22() at the console to see what 
 \seealso{
 \link{print22}
 }
-

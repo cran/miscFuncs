@@ -20,4 +20,3 @@ a roxygen template for the method.
 A function to generate a roxygen template for a method of a generic S3 function. Normally, this would be called from
 the function generic, see ?generic
 }
-

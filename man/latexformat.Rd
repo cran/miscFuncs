@@ -21,4 +21,3 @@ latexformat(x, digits = 3, scientific = -3, ...)
 \description{
 A function to format text or numeric variables using scientific notation for LaTeX documents.
 }
-

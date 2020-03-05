@@ -20,4 +20,3 @@ The lat/lon coordinates from Wikipedia
 A function to return the lat/lon coordinates of towns in the UK from Wikipedia. Does not always work. Sometimes
 the county has to be specified too.
 }
-

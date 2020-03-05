@@ -4,8 +4,22 @@
 \alias{KFadvance}
 \title{KFadvance function}
 \usage{
-KFadvance(obs, oldmean, oldvar, A, B, C, D, E, F, W, V, marglik = FALSE,
-  log = TRUE, na.rm = FALSE)
+KFadvance(
+  obs,
+  oldmean,
+  oldvar,
+  A,
+  B,
+  C,
+  D,
+  E,
+  F,
+  W,
+  V,
+  marglik = FALSE,
+  log = TRUE,
+  na.rm = FALSE
+)
 }
 \arguments{
 \item{obs}{Y_t}
@@ -49,10 +63,9 @@ theta_t = A*theta_{t-1} + B + C*W (state equation)
 
 Y_t = D*theta_t + E + F*V         (observation equation)
 
-W and V are the covariance matrices of the state and observation noise. Prior is normal,
+W and V are the covariance matrices of the state and observation noise. Prior is normal, 
 
 N(mu_{t-1},Sigma_{t-1})
 
 Result is the posterior, N(mu_t,Sigma_t), together with the likelihood contribution Prob(Y_t|Y_{t-1})
 }
-

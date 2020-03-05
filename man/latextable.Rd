@@ -4,8 +4,18 @@
 \alias{latextable}
 \title{latextable function}
 \usage{
-latextable(x, digits = 3, scientific = -3, colnames = NULL,
-  rownames = NULL, caption = NULL, narep = " ", laststr = "", ...)
+latextable(
+  x,
+  digits = 3,
+  scientific = -3,
+  colnames = NULL,
+  rownames = NULL,
+  caption = NULL,
+  narep = " ",
+  laststr = "",
+  intable = TRUE,
+  ...
+)
 }
 \arguments{
 \item{x}{a matrix, or object that can be coerced to a matrix. x can include mixed character and numeric entries.}
@@ -24,6 +34,8 @@ latextable(x, digits = 3, scientific = -3, colnames = NULL,
 
 \item{laststr}{string to write at end, eg note the double backslash!!}
 
+\item{intable}{output in a table environment?}
+
 \item{...}{additional arguments passed to format}
 }
 \value{
@@ -41,4 +53,3 @@ Just copy and paste the results into your LaTeX document.
 \examples{
 latextable(as.data.frame(matrix(1:4,2,2)))
 }
-

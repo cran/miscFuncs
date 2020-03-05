@@ -15,4 +15,3 @@ Van der Corput sequence of length n
 \description{
 A function to generate a Van der Corput sequence of numbers.
 }
-

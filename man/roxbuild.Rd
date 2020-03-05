@@ -15,4 +15,3 @@ builds and checks the package
 \description{
 A function to build  packages where documentation has been compiled with roxygen. Probably only works in Linux.
 }
-

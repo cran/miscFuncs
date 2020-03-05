@@ -15,4 +15,3 @@ The time it took to evaluate the expression in seconds
 \description{
 A function to time an operation in R
 }
-

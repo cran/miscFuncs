@@ -15,12 +15,13 @@
 ##' @param caption optional caption, not normally used
 ##' @param narep string giving replacement for NA entries in the matrix
 ##' @param laststr string to write at end, eg note the double backslash!!
+##' @param intable output in a table environment?
 ##' @param ... additional arguments passed to format
 ##' @return prints the LaTeX table to screen, so it can be copied into reports
 ##' @examples latextable(as.data.frame(matrix(1:4,2,2)))
 ##' @export
 
-latextable <- function(x,digits=3,scientific=-3,colnames=NULL,rownames=NULL,caption=NULL,narep=" ",laststr="",...){
+latextable <- function(x,digits=3,scientific=-3,colnames=NULL,rownames=NULL,caption=NULL,narep=" ",laststr="",intable=TRUE,...){
 
     x <- as.matrix(x)
 
@@ -48,9 +49,11 @@ latextable <- function(x,digits=3,scientific=-3,colnames=NULL,rownames=NULL,capt
     }
 
 	d <- dim(x)
-	write("","")
-	write("\\begin{table}[htbp]","")
-	write("    \\centering","")
+	write("\n","")
+    if(intable){
+    	write("\\begin{table}[htbp]","")
+    	write("    \\centering","")
+    }
 	if(!is.null(caption)){write(paste("    \\caption{",caption,"}",sep=""),"")}
 	cs <- "    \\begin{tabular}{"
 
@@ -144,6 +147,8 @@ latextable <- function(x,digits=3,scientific=-3,colnames=NULL,rownames=NULL,capt
 		write(towrite,"")
 	}
 	write("    \\end{tabular}","")
-	write("\\end{table}","")
-	write("","")
+    if(intable){
+    	write("\\end{table}","")
+    }
+	write("\n","")
 }

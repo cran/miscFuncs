@@ -21,4 +21,3 @@ roxygen text printed to the console.
 \description{
 A function to generate roxygen templates for generic funtions and associated methods.
 }
-
