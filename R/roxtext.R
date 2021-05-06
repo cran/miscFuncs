@@ -6,19 +6,22 @@
 ##' would generate a template for this function. Note that functions with default arguments that include quotes
 ##' will throw up an error at the moment, just delete these bits from the string, and if shold work.
 ##'
-##' @param s a string enclosed in quotes
+##' @param fname character string, the name of a function
 ##' @return minimal roxygen template
 ##' @export
 
-roxtext <- function(s){ # s a string
-    s <- unlist(strsplit(s,"<-"))
-    s <- gsub(" ","",s)
-    fname <- s[1]
-    s <- s[2]
-    left <- gregexpr("\\(",s)[[1]][1]
-    right <- rev(gregexpr(")",s)[[1]])[1]
-    s <- substr(s,left+1,right-1)
-    arglist <- unlist(strsplit(s,","))
+roxtext <- function(fname){
+    # s <- unlist(strsplit(s,"<-"))
+    # s <- gsub(" ","",s)
+    # fname <- s[1]
+    # s <- s[2]
+    # left <- gregexpr("\\(",s)[[1]][1]
+    # right <- rev(gregexpr(")",s)[[1]])[1]
+    # s <- substr(s,left+1,right-1)
+    # arglist <- unlist(strsplit(s,","))
+
+    arglist = names(formals(fname)) # should have seen this before (!)
+
     cat("##' ",fname," function\n",sep="")
     cat("##'\n")
     cat("##' A function to \n")

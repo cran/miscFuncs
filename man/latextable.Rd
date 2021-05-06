@@ -14,6 +14,8 @@ latextable(
   narep = " ",
   laststr = "",
   intable = TRUE,
+  manualalign = NULL,
+  file = "",
   ...
 )
 }
@@ -35,6 +37,10 @@ latextable(
 \item{laststr}{string to write at end, eg note the double backslash!!}
 
 \item{intable}{output in a table environment?}
+
+\item{manualalign}{manual align string e.g. 'ccc' or 'l|ccc'}
+
+\item{file}{connection to write to, default is '' which writes to the console; see ?write for further details}
 
 \item{...}{additional arguments passed to format}
 }

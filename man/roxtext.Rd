@@ -4,10 +4,10 @@
 \alias{roxtext}
 \title{roxtext function}
 \usage{
-roxtext(s)
+roxtext(fname)
 }
 \arguments{
-\item{s}{a string enclosed in quotes}
+\item{fname}{character string, the name of a function}
 }
 \value{
 minimal roxygen template

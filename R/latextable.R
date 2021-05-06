@@ -16,12 +16,14 @@
 ##' @param narep string giving replacement for NA entries in the matrix
 ##' @param laststr string to write at end, eg note the double backslash!!
 ##' @param intable output in a table environment?
+##' @param manualalign manual align string e.g. 'ccc' or 'l|ccc'
+##' @param file connection to write to, default is '' which writes to the console; see ?write for further details
 ##' @param ... additional arguments passed to format
 ##' @return prints the LaTeX table to screen, so it can be copied into reports
 ##' @examples latextable(as.data.frame(matrix(1:4,2,2)))
 ##' @export
 
-latextable <- function(x,digits=3,scientific=-3,colnames=NULL,rownames=NULL,caption=NULL,narep=" ",laststr="",intable=TRUE,...){
+latextable <- function(x,digits=3,scientific=-3,colnames=NULL,rownames=NULL,caption=NULL,narep=" ",laststr="",intable=TRUE,manualalign=NULL,file="",...){
 
     x <- as.matrix(x)
 
@@ -49,12 +51,12 @@ latextable <- function(x,digits=3,scientific=-3,colnames=NULL,rownames=NULL,capt
     }
 
 	d <- dim(x)
-	write("\n","")
+	write("\n",file)
     if(intable){
-    	write("\\begin{table}[htbp]","")
-    	write("    \\centering","")
+    	write("\\begin{table}[htbp]",file,append=TRUE)
+    	write("    \\centering",file,append=TRUE)
     }
-	if(!is.null(caption)){write(paste("    \\caption{",caption,"}",sep=""),"")}
+	if(!is.null(caption)){write(paste("    \\caption{",caption,"}",sep=""),file,append=TRUE)}
 	cs <- "    \\begin{tabular}{"
 
     cn <- ""
@@ -74,25 +76,38 @@ latextable <- function(x,digits=3,scientific=-3,colnames=NULL,rownames=NULL,capt
         strt <- 1
         en <- d[2]
     }
+
 	for (i in strt:en){
-		cs <- paste(cs,"c",sep="")
+        if(is.null(manualalign)){
+    		cs <- paste(cs,"c",sep="")
+        }
 		if (i<en){
             if(!all(colnames=="")){
                 cn <- paste(cn,colnames[i]," & ",sep="")
             }
         }
 	}
-	cs <- paste(cs,"}",sep="")
-    if(!all(colnames=="")){
-    	cn <- paste(cn,colnames[en]," \\\\ \\hline",sep="")
+
+    if(!is.null(manualalign)){
+        cs <- paste(cs,manualalign,"}",sep="")
     }
-	write(cs,"")
+    else{
+        cs <- paste(cs,"}",sep="")
+    }
+
+
+
+
+    if(!all(colnames=="")){
+    	cn <- paste(cn,colnames[en]," \\\\ \\hline \\hline",sep="")
+    }
+	write(cs,file,append=TRUE)
 	if(!is.null(colnames)){
         if(!all(colnames=="")){
     		if (!any(length(colnames)==c(d[2],d[2]+1))){
                 stop("Incorrect number of column names")
             }
-    		write(paste("        ",cn),"")
+    		write(paste("        ",cn),file,append=TRUE)
         }
 	}
 
@@ -144,11 +159,11 @@ latextable <- function(x,digits=3,scientific=-3,colnames=NULL,rownames=NULL,capt
 		if (i==d[1] & laststr!=""){
 			towrite <- paste(towrite," ", laststr,sep="")
 		}
-		write(towrite,"")
+		write(towrite,file,append=TRUE)
 	}
-	write("    \\end{tabular}","")
+	write("    \\end{tabular}",file,append=TRUE)
     if(intable){
-    	write("\\end{table}","")
+    	write("\\end{table}",file,append=TRUE)
     }
-	write("\n","")
+	write("\n",file,append=TRUE)
 }
