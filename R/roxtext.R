@@ -27,14 +27,14 @@ roxtext <- function(fname){
     cat("##' A function to \n")
     cat("##'\n")
     for (a in arglist){
-        if(length(grep("=",a))==0){
+        # if(length(grep("=",a))==0){
             cat("##' @param ",a," X \n",sep="")
-        }
-        else{
-            x <- unlist(strsplit(a,"="))[1]
-            x <- gsub(" ","",x)
-            cat("##' @param ",x," X \n",sep="")
-        }
+        # }
+        # else{
+        #     x <- unlist(strsplit(a,"="))[1]
+        #     x <- gsub(" ","",x)
+        #     cat("##' @param ",x," X \n",sep="")
+        # }
     }
     cat("##' @return ...\n")
     cat("##' @export\n")

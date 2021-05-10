@@ -1,4 +1,4 @@
-1204a743ba9d2b9a5e1389f1ce58f1dd *DESCRIPTION
+17d985f946b42ccea3a72cb78a8ee045 *DESCRIPTION
 d48e38cf9a294bfe126ad0b4d9da09cc *NAMESPACE
 ce07383ff7d6d031d7c7d7f9e237c3e3 *R/22tables.R
 3d7ed2a78c4eb4f8c8cd860aa402cca8 *R/EKFadvance.R
@@ -14,14 +14,14 @@ d445567e7d7fc2bd3b42922d79307d07 *R/kalman_functions.R
 6eb316fd6b8b321093797e56aaa6fcc4 *R/latextable.R
 4024a84e4c3a58f52e97f88c9c50e06e *R/method.R
 c257067a14f82e7fd7a2b6c5948f8885 *R/roxbc.R
-24a384f69fa55345690dc8cb91b4dc02 *R/roxtext.R
+7ebe4e8b0fadf50716564d478494ec73 *R/roxtext.R
 81b07f1eb720193b69fabcfc64e5a3e0 *R/taylor_correlation.R
 8346542978c4cbc56740283b511301ca *R/timeop.R
 411f76242c2003cd2968ae9b60304bbf *R/vdc.R
 a951aebae8e8fb5483f43f01f3ee9537 *R/zzz.R
 e90f4db9db58f4b28da39125a88dab44 *build/vignette.rds
 d920b233a39c1fbbbc967f051c0b9fe1 *inst/doc/miscFuncs.Rtex
-3365fe3725d3c52d4d85b3018bf6a237 *inst/doc/miscFuncs.pdf
+19b31406709256a4ec479aee997cf501 *inst/doc/miscFuncs.pdf
 6c8518292fe10d90e7d89b352486adc8 *inst/templates/KFfit.R
 ee9ec88d62df40ed28a122aae50a9939 *inst/templates/KFparest.R
 0016150d086e233f4d263ab626c48543 *man/EKFadvance.Rd
