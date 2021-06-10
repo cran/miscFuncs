@@ -7,7 +7,7 @@
 roxtext(fname)
 }
 \arguments{
-\item{fname}{character string, the name of a function}
+\item{fname}{the name of a function as a character string or as a direct reference to the function}
 }
 \value{
 minimal roxygen template

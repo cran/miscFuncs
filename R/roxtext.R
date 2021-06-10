@@ -6,35 +6,23 @@
 ##' would generate a template for this function. Note that functions with default arguments that include quotes
 ##' will throw up an error at the moment, just delete these bits from the string, and if shold work.
 ##'
-##' @param fname character string, the name of a function
+##' @param fname the name of a function as a character string or as a direct reference to the function
 ##' @return minimal roxygen template
 ##' @export
 
 roxtext <- function(fname){
-    # s <- unlist(strsplit(s,"<-"))
-    # s <- gsub(" ","",s)
-    # fname <- s[1]
-    # s <- s[2]
-    # left <- gregexpr("\\(",s)[[1]][1]
-    # right <- rev(gregexpr(")",s)[[1]])[1]
-    # s <- substr(s,left+1,right-1)
-    # arglist <- unlist(strsplit(s,","))
-
-    arglist = names(formals(fname)) # should have seen this before (!)
+    mc = match.call()
+    if(inherits(fname,"function")){
+        fname = as.character(mc[[2]])
+    }
+    arglist = names(formals(fname))
 
     cat("##' ",fname," function\n",sep="")
     cat("##'\n")
     cat("##' A function to \n")
     cat("##'\n")
     for (a in arglist){
-        # if(length(grep("=",a))==0){
-            cat("##' @param ",a," X \n",sep="")
-        # }
-        # else{
-        #     x <- unlist(strsplit(a,"="))[1]
-        #     x <- gsub(" ","",x)
-        #     cat("##' @param ",x," X \n",sep="")
-        # }
+        cat("##' @param ",a," X \n",sep="")
     }
     cat("##' @return ...\n")
     cat("##' @export\n")
