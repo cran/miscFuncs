@@ -73,12 +73,7 @@ KFadvance <- function(obs,oldmean,oldvar,A,B,C,D,E,F,W,V,marglik=FALSE,log=TRUE,
             thing4 <- S %*% thing3
 			newmean <- T + thing4 %*% resid
 			newvar <- S - thing4 %*% thing1
-            if(log){
-    			marginal <- (-1/2)*t(resid) %*% Kinv %*% resid # does not include constant of proportionality
-            }
-            else{
-                marginal <- dmvnorm(as.vector(obs),as.vector(margmean),K,log=log)
-            }
+            marginal <- dmvnorm(as.vector(obs),as.vector(margmean),K,log=log)
 		}
 		return(list(mean=newmean,var=newvar,mlik=marginal))
 	}

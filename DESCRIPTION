@@ -9,13 +9,13 @@ Author: Benjamin M. Taylor
 Description: Implementing various things including functions for LaTeX tables,
     the Kalman filter, web scraping, development tools, relative risk and odds
     ratio.
-Version: 1.5-3
-Date: 2022-12-10
+Version: 1.5-4
+Date: 2023-06-07
 Depends: roxygen2, mvtnorm
 Imports: stats
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.3
 Encoding: UTF-8
 NeedsCompilation: no
-Packaged: 2022-12-10 11:33:58 UTC; taylorb7
+Packaged: 2023-06-07 11:29:12 UTC; ben
 Repository: CRAN
-Date/Publication: 2022-12-10 11:50:02 UTC
+Date/Publication: 2023-06-07 11:50:02 UTC
