@@ -4,9 +4,9 @@
 ##'
 ##' @import roxygen2
 ##' @import mvtnorm
-##' @importFrom grDevices dev.off pdf
-##' @importFrom graphics plot polygon
-##' @importFrom stats cor sd
+##' @importFrom grDevices dev.off pdf rgb
+##' @importFrom graphics plot polygon lines matplot
+##' @importFrom stats cor sd quantile rnorm
 ##' @param libname libname argument
 ##' @param pkgname pkgname argument
 ##' @return ...

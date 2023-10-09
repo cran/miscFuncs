@@ -1,5 +1,5 @@
-4d944deef8e6fcc8c8302c5eefc6d40b *DESCRIPTION
-48d1b5b8b651393a5f5ec574da024aea *NAMESPACE
+ac0a86271da129aa4ae0e2e4b8f4698d *DESCRIPTION
+dce062b359e34c8e6ebf82d69f0cd455 *NAMESPACE
 ce07383ff7d6d031d7c7d7f9e237c3e3 *R/22tables.R
 3d7ed2a78c4eb4f8c8cd860aa402cca8 *R/EKFadvance.R
 658dbb41e642fcf2b6c7f375e15d638a *R/KFadvance.R
@@ -14,15 +14,16 @@ e41b77e5c81e2264f4468df827a01b0e *R/colour_legend.R
 d445567e7d7fc2bd3b42922d79307d07 *R/kalman_functions.R
 6eb316fd6b8b321093797e56aaa6fcc4 *R/latextable.R
 4024a84e4c3a58f52e97f88c9c50e06e *R/method.R
+2491ea2150d2ec64aa289e8c89dc29d0 *R/qqCI.R
 c257067a14f82e7fd7a2b6c5948f8885 *R/roxbc.R
 c9d6cee92ff54ed6ce71e1f565000620 *R/roxtext.R
 81b07f1eb720193b69fabcfc64e5a3e0 *R/taylor_correlation.R
 8346542978c4cbc56740283b511301ca *R/timeop.R
 411f76242c2003cd2968ae9b60304bbf *R/vdc.R
-a951aebae8e8fb5483f43f01f3ee9537 *R/zzz.R
-aae253fa3e173f643dccce386c68f4ef *build/vignette.rds
+42feccec970f3beb980c1fa5057e75c3 *R/zzz.R
+f838675b095e87e7c2feb663d48c7242 *build/vignette.rds
 d920b233a39c1fbbbc967f051c0b9fe1 *inst/doc/miscFuncs.Rtex
-dc91c35e7f757b4e4f6aca40bbf5335f *inst/doc/miscFuncs.pdf
+eae3ee3bc145937850269e0af9eff776 *inst/doc/miscFuncs.pdf
 6c8518292fe10d90e7d89b352486adc8 *inst/templates/KFfit.R
 ee9ec88d62df40ed28a122aae50a9939 *inst/templates/KFparest.R
 0016150d086e233f4d263ab626c48543 *man/EKFadvance.Rd
@@ -48,6 +49,7 @@ c1d0cc805817af13d72254ede8e9acc4 *man/latextable.Rd
 d7234c8f41bfb08421586d50d97ebeb4 *man/method.Rd
 427dd153371d2925ae1c478791bd283a *man/monthnames.Rd
 83551bb95fc6b62c66e7e849ce393cfa *man/print22.Rd
+91c3af6b1baaca74ca7edcdfee0c6f39 *man/qqci.Rd
 3be326569583d19a360928a37aac8cb3 *man/roxbc.Rd
 bc9979a3a0121aad0cd8c5ed019bcbc4 *man/roxbuild.Rd
 465677a60d64eae600d600318e45d138 *man/roxtext.Rd
