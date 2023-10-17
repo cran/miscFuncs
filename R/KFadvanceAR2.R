@@ -5,21 +5,21 @@
 ##'
 ##' The model is: (note that Y and theta are COLUMN VECTORS)
 ##'
-##' theta_t = A*theta_{t-1} + A1*theta_{t-2} + B + C*W (state equation)
+##' theta(t) = A*theta(t-1) + A1*theta(t-2) + B + C*W (state equation)
 ##'
-##' Y_t = D*theta_t + E + F*V         (observation equation)
+##' Y(t) = D*theta(t) + E + F*V         (observation equation)
 ##'
 ##' W and V are the covariance matrices of the state and observation noise. Priors are normal, 
 ##'
-##' N(mu_{t-1},Sigma_{t-1}) and N(mu_{t-2},Sigma_{t-2})
+##' N(mu(t-1),Sigma(t-1)) and N(mu(t-2),Sigma(t-2))
 ##'
-##' Result is the posterior, N(mu_t,Sigma_t), together with the likelihood contribution Prob(Y_t|Y_{t-1})
+##' Result is the posterior, N(mu(t),Sigma(t)), together with the likelihood contribution Prob(Y(t)|Y(t-1))
 ##'
-##' @param obs Y_t
-##' @param oldmean mu_{t-1} 
-##' @param oldermean mu_{t2} 
-##' @param oldvar Sigma_{t-1}
-##' @param oldervar Sigma_{t-2}
+##' @param obs Y(t)
+##' @param oldmean mu(t-1) 
+##' @param oldermean mu(t-2) 
+##' @param oldvar Sigma(t-1)
+##' @param oldervar Sigma(t-2)
 ##' @param A A matrix A
 ##' @param A1 A matrix A1
 ##' @param B column vector B

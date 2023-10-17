@@ -1,9 +1,9 @@
-ac0a86271da129aa4ae0e2e4b8f4698d *DESCRIPTION
+e00ad4122c5816acf13bc2c287b09b8f *DESCRIPTION
 dce062b359e34c8e6ebf82d69f0cd455 *NAMESPACE
 ce07383ff7d6d031d7c7d7f9e237c3e3 *R/22tables.R
 3d7ed2a78c4eb4f8c8cd860aa402cca8 *R/EKFadvance.R
-658dbb41e642fcf2b6c7f375e15d638a *R/KFadvance.R
-99a7e4a958f8e60cfe3219bb351810c3 *R/KFadvanceAR2.R
+b32aa94b8f3c7bb3faafcbf35dde2aa9 *R/KFadvance.R
+4e8ce3b7a61376d59bd22e4ce2d34435 *R/KFadvanceAR2.R
 cbd66e93886ec08818dcd809d8dc0ae5 *R/KFtemplates.R
 88dda88147c050063755fc1e22619785 *R/bin.R
 e41b77e5c81e2264f4468df827a01b0e *R/colour_legend.R
@@ -14,7 +14,7 @@ e41b77e5c81e2264f4468df827a01b0e *R/colour_legend.R
 d445567e7d7fc2bd3b42922d79307d07 *R/kalman_functions.R
 6eb316fd6b8b321093797e56aaa6fcc4 *R/latextable.R
 4024a84e4c3a58f52e97f88c9c50e06e *R/method.R
-2491ea2150d2ec64aa289e8c89dc29d0 *R/qqCI.R
+6bd4c74844a6917c859a3bcef444d8cf *R/qqci.R
 c257067a14f82e7fd7a2b6c5948f8885 *R/roxbc.R
 c9d6cee92ff54ed6ce71e1f565000620 *R/roxtext.R
 81b07f1eb720193b69fabcfc64e5a3e0 *R/taylor_correlation.R
@@ -23,12 +23,12 @@ c9d6cee92ff54ed6ce71e1f565000620 *R/roxtext.R
 42feccec970f3beb980c1fa5057e75c3 *R/zzz.R
 f838675b095e87e7c2feb663d48c7242 *build/vignette.rds
 d920b233a39c1fbbbc967f051c0b9fe1 *inst/doc/miscFuncs.Rtex
-eae3ee3bc145937850269e0af9eff776 *inst/doc/miscFuncs.pdf
+8b7d2af2ed3c373a46a755c9fab765da *inst/doc/miscFuncs.pdf
 6c8518292fe10d90e7d89b352486adc8 *inst/templates/KFfit.R
 ee9ec88d62df40ed28a122aae50a9939 *inst/templates/KFparest.R
 0016150d086e233f4d263ab626c48543 *man/EKFadvance.Rd
-9b872942d7caf799005f2b1b2655e5cf *man/KFadvance.Rd
-2daf4157217c6b01632551c90d8f7cdd *man/KFadvanceAR2.Rd
+0048e17e1d0e7b8de23fc4b1ac3550b5 *man/KFadvance.Rd
+2734847daeecf045182183956bfc0b76 *man/KFadvanceAR2.Rd
 23e6f81c34d9ac82cb39209650a90a5f *man/KFtemplates.Rd
 58c0110140328d5ea56323179be5559e *man/bin.Rd
 6bf3bef96e57d5690971874e359fcc93 *man/colour_legend.Rd
@@ -49,7 +49,7 @@ c1d0cc805817af13d72254ede8e9acc4 *man/latextable.Rd
 d7234c8f41bfb08421586d50d97ebeb4 *man/method.Rd
 427dd153371d2925ae1c478791bd283a *man/monthnames.Rd
 83551bb95fc6b62c66e7e849ce393cfa *man/print22.Rd
-91c3af6b1baaca74ca7edcdfee0c6f39 *man/qqci.Rd
+f7b7857d0890a240d86f796ddec716e4 *man/qqci.Rd
 3be326569583d19a360928a37aac8cb3 *man/roxbc.Rd
 bc9979a3a0121aad0cd8c5ed019bcbc4 *man/roxbuild.Rd
 465677a60d64eae600d600318e45d138 *man/roxtext.Rd
