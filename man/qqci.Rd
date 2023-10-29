@@ -12,10 +12,13 @@ qqci(
   zero = FALSE,
   standardise = FALSE,
   qts = c(0.025, 0.975),
-  lwd = 2,
+  llwd = 2,
+  lcol = "red",
   xlab = "Theoretical",
   ylab = "Sample",
-  alpha = 0.1,
+  alpha = 0.02,
+  cicol = "black",
+  cilwd = 1,
   ...
 )
 }
@@ -34,13 +37,19 @@ qqci(
 
 \item{qts}{vector of probabilities giving which sample-based empirical quantiles to add to the plot. Default is c(0.025,0.975)}
 
-\item{lwd}{positive numeric, the width of line to plot}
+\item{llwd}{positive numeric, the width of line to plot, default is 2}
+
+\item{lcol}{colour of line to plot, default is red}
 
 \item{xlab}{character, the label for the x-axis}
 
 \item{ylab}{character, the label for the y-axis}
 
 \item{alpha}{controls transparency of samples (coloured blue)}
+
+\item{cicol}{colour of confidence band lines, default is black}
+
+\item{cilwd}{width of confidence band lines, default is 1}
 
 \item{...}{additional arguments to pass to matplot}
 }
