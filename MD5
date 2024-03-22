@@ -1,5 +1,5 @@
-b44aaff984544e37d785b2a51523053a *DESCRIPTION
-dce062b359e34c8e6ebf82d69f0cd455 *NAMESPACE
+423a508ed5a309f7fcb447bfcff91d23 *DESCRIPTION
+c42cf211f9553bb38dd90692c881a760 *NAMESPACE
 ce07383ff7d6d031d7c7d7f9e237c3e3 *R/22tables.R
 3d7ed2a78c4eb4f8c8cd860aa402cca8 *R/EKFadvance.R
 b32aa94b8f3c7bb3faafcbf35dde2aa9 *R/KFadvance.R
@@ -7,6 +7,7 @@ b32aa94b8f3c7bb3faafcbf35dde2aa9 *R/KFadvance.R
 cbd66e93886ec08818dcd809d8dc0ae5 *R/KFtemplates.R
 88dda88147c050063755fc1e22619785 *R/bin.R
 e41b77e5c81e2264f4468df827a01b0e *R/colour_legend.R
+76ddba75ececafa43603f4557cdebcfe *R/garchForecast.R
 341bb3a46f31fa6b2d805d95465e27be *R/genHarmonic.R
 05615a5273eb1d0c46b45f5d51259ec3 *R/generic.R
 965f50e4939f068f4cfd9a35684c8a02 *R/getstrbetween.R
@@ -20,10 +21,10 @@ c9d6cee92ff54ed6ce71e1f565000620 *R/roxtext.R
 81b07f1eb720193b69fabcfc64e5a3e0 *R/taylor_correlation.R
 8346542978c4cbc56740283b511301ca *R/timeop.R
 411f76242c2003cd2968ae9b60304bbf *R/vdc.R
-42feccec970f3beb980c1fa5057e75c3 *R/zzz.R
-f838675b095e87e7c2feb663d48c7242 *build/vignette.rds
+efadca6a088f720666c31204979ba95d *R/zzz.R
+8d4e9f3c5979e914be05e9b702f55dd2 *build/vignette.rds
 d920b233a39c1fbbbc967f051c0b9fe1 *inst/doc/miscFuncs.Rtex
-5f82eabbb09a003a9689d9f932546ca7 *inst/doc/miscFuncs.pdf
+44acc5ba6131372c07a82ab8c8e4f963 *inst/doc/miscFuncs.pdf
 6c8518292fe10d90e7d89b352486adc8 *inst/templates/KFfit.R
 ee9ec88d62df40ed28a122aae50a9939 *inst/templates/KFparest.R
 0016150d086e233f4d263ab626c48543 *man/EKFadvance.Rd
@@ -39,13 +40,16 @@ f280e530e345e6874c2ac53f72b6de38 *man/cosrsaw.Rd
 12f94d8a94a61b7ee6e4a5c4b50e8aaa *man/costri.Rd
 b49683a491015f44c56d74ec7ffa0f11 *man/daynames.Rd
 9bfff7d3ef45a57b9c311aced74e1083 *man/dot-onAttach.Rd
+454750b97c131c495625a89b51f56282 *man/fcastGARCH.Rd
 3c22a0effeaca439eddf637a791e9581 *man/genIntegratedharmonic.Rd
 9fa58c862d9a49a4cf630b090ae2c951 *man/generic.Rd
 09ec3f40cced36446edddda2c61cf076 *man/genharmonic.Rd
 36283782f3a60e69d51b94319f3542e4 *man/getstrbetween.Rd
 0eb7fcc77acbb40c08c933d22a7e3a85 *man/getwikicoords.Rd
+93b34acab9c791102d031fb25e29caf5 *man/hCreate.Rd
 d1e6639d5b2cca2d550cd8abf90be27e *man/latexformat.Rd
 c1d0cc805817af13d72254ede8e9acc4 *man/latextable.Rd
+de0dfa55f1b85f6a5024c9f6de7a597b *man/lr2fact.Rd
 d7234c8f41bfb08421586d50d97ebeb4 *man/method.Rd
 427dd153371d2925ae1c478791bd283a *man/monthnames.Rd
 83551bb95fc6b62c66e7e849ce393cfa *man/print22.Rd
@@ -60,4 +64,5 @@ b589e2d36957aa23eda04a6bf3318d10 *man/sinrsaw.Rd
 d3661b8e190b72805f901192246f1976 *man/timeop.Rd
 9c3dbfb5d7c809072b442fc31fe1b765 *man/twotwoinfo.Rd
 51e0c6e34d34e4f41becae46eda7f8c4 *man/vdc.Rd
+971f7050955fb759d420d22b0eb1aa1e *man/yhIterate.Rd
 d920b233a39c1fbbbc967f051c0b9fe1 *vignettes/miscFuncs.Rtex

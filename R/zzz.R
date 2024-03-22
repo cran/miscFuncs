@@ -7,6 +7,7 @@
 ##' @importFrom grDevices dev.off pdf rgb
 ##' @importFrom graphics plot polygon lines matplot
 ##' @importFrom stats cor sd quantile rnorm
+##' @importFrom extraDistr rinvgamma
 ##' @param libname libname argument
 ##' @param pkgname pkgname argument
 ##' @return ...
