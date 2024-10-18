@@ -1,5 +1,5 @@
-423a508ed5a309f7fcb447bfcff91d23 *DESCRIPTION
-c42cf211f9553bb38dd90692c881a760 *NAMESPACE
+70f5a272149f6ab768743ab3e3e8db3d *DESCRIPTION
+12d8ca17bc31edd64e8dca0d1a0f0c33 *NAMESPACE
 ce07383ff7d6d031d7c7d7f9e237c3e3 *R/22tables.R
 3d7ed2a78c4eb4f8c8cd860aa402cca8 *R/EKFadvance.R
 b32aa94b8f3c7bb3faafcbf35dde2aa9 *R/KFadvance.R
@@ -14,17 +14,18 @@ e41b77e5c81e2264f4468df827a01b0e *R/colour_legend.R
 347cce36892a93c3c18324091d5b0af2 *R/getwikicoords.R
 d445567e7d7fc2bd3b42922d79307d07 *R/kalman_functions.R
 6eb316fd6b8b321093797e56aaa6fcc4 *R/latextable.R
+9d8d48f1d2b7787d518f7f187ddeba6d *R/lm_diagnistics.R
 4024a84e4c3a58f52e97f88c9c50e06e *R/method.R
-7d27b8d6bed561b4dca6d14a0a8703d5 *R/qqci.R
+4973455394401bf03067e1612e229022 *R/qqci.R
 c257067a14f82e7fd7a2b6c5948f8885 *R/roxbc.R
 c9d6cee92ff54ed6ce71e1f565000620 *R/roxtext.R
 81b07f1eb720193b69fabcfc64e5a3e0 *R/taylor_correlation.R
 8346542978c4cbc56740283b511301ca *R/timeop.R
 411f76242c2003cd2968ae9b60304bbf *R/vdc.R
-efadca6a088f720666c31204979ba95d *R/zzz.R
-8d4e9f3c5979e914be05e9b702f55dd2 *build/vignette.rds
+a1305d02005d460f9cc5537021748d56 *R/zzz.R
+05f05e0029d4e03412dc5ba7437459b5 *build/vignette.rds
 d920b233a39c1fbbbc967f051c0b9fe1 *inst/doc/miscFuncs.Rtex
-44acc5ba6131372c07a82ab8c8e4f963 *inst/doc/miscFuncs.pdf
+3fee20c53bebc6bd858db3f7810f3612 *inst/doc/miscFuncs.pdf
 6c8518292fe10d90e7d89b352486adc8 *inst/templates/KFfit.R
 ee9ec88d62df40ed28a122aae50a9939 *inst/templates/KFparest.R
 0016150d086e233f4d263ab626c48543 *man/EKFadvance.Rd
@@ -40,6 +41,8 @@ f280e530e345e6874c2ac53f72b6de38 *man/cosrsaw.Rd
 12f94d8a94a61b7ee6e4a5c4b50e8aaa *man/costri.Rd
 b49683a491015f44c56d74ec7ffa0f11 *man/daynames.Rd
 9bfff7d3ef45a57b9c311aced74e1083 *man/dot-onAttach.Rd
+3003a92c2757b893ade1dae24ea63876 *man/dplot.Rd
+3781f1b2ff3c6e063ec5435e3b7f95ed *man/dplot.lm.Rd
 454750b97c131c495625a89b51f56282 *man/fcastGARCH.Rd
 3c22a0effeaca439eddf637a791e9581 *man/genIntegratedharmonic.Rd
 9fa58c862d9a49a4cf630b090ae2c951 *man/generic.Rd
@@ -53,7 +56,7 @@ de0dfa55f1b85f6a5024c9f6de7a597b *man/lr2fact.Rd
 d7234c8f41bfb08421586d50d97ebeb4 *man/method.Rd
 427dd153371d2925ae1c478791bd283a *man/monthnames.Rd
 83551bb95fc6b62c66e7e849ce393cfa *man/print22.Rd
-571ae857f2053e6a0b4870644e97a35a *man/qqci.Rd
+1fb7b491ea5adf65892183c136a2aa95 *man/qqci.Rd
 3be326569583d19a360928a37aac8cb3 *man/roxbc.Rd
 bc9979a3a0121aad0cd8c5ed019bcbc4 *man/roxbuild.Rd
 465677a60d64eae600d600318e45d138 *man/roxtext.Rd
@@ -64,5 +67,6 @@ b589e2d36957aa23eda04a6bf3318d10 *man/sinrsaw.Rd
 d3661b8e190b72805f901192246f1976 *man/timeop.Rd
 9c3dbfb5d7c809072b442fc31fe1b765 *man/twotwoinfo.Rd
 51e0c6e34d34e4f41becae46eda7f8c4 *man/vdc.Rd
+324c6607077ef5af8632cd538b9908f9 *man/vif.Rd
 971f7050955fb759d420d22b0eb1aa1e *man/yhIterate.Rd
 d920b233a39c1fbbbc967f051c0b9fe1 *vignettes/miscFuncs.Rtex

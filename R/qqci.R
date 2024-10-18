@@ -7,7 +7,7 @@
 ##'
 ##' @param x a vector of values to compare
 ##' @param rfun a function accepting a single argument to generate samples from the comparison distribution, the default is rnorm
-##' @param y an optional vector of samples to compare the quantiles against. In the case this is non-null, the function rfun will be automatically chosen as bootstrapping y with replacement and sample zise the same as the length of x. You must specify exactly one of rfun or y.
+##' @param y an optional vector of samples to compare the quantiles against. In the case this is non-null, the function rfun will be automatically chosen as bootstrapping y with replacement and sample size the same as the length of x. You must specify exactly one of rfun or y.
 ##' @param ns the number of simulations to generate: the more simulations, the more accurate the confidence bands. Default is 100
 ##' @param zero logical, whether to zero the plot across the x-axis. Default is FALSE
 ##' @param standardise logical, whether to standardise so that the variance around each quantile is made constant (this can help in situations where the confidence bands appear very tight in places)

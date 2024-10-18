@@ -5,15 +5,13 @@
 ##' @import roxygen2
 ##' @import mvtnorm
 ##' @importFrom grDevices dev.off pdf rgb
-##' @importFrom graphics plot polygon lines matplot
-##' @importFrom stats cor sd quantile rnorm
+##' @importFrom graphics plot polygon lines matplot abline par points text title
+##' @importFrom stats cor sd quantile rnorm fitted lm.influence lowess residuals dnorm qnorm formula lm model.frame model.matrix shapiro.test
 ##' @importFrom extraDistr rinvgamma
 ##' @param libname libname argument
 ##' @param pkgname pkgname argument
 ##' @return ...
 ##' @export
-
-##' @importFrom stats dnorm qnorm
 
 .onAttach <- function(libname, pkgname)
 {
