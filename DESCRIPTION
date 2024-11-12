@@ -13,15 +13,15 @@ Authors@R: person(given = c("Benjamin", "M."),
 Description: Implementing various things including functions for LaTeX tables,
     the Kalman filter, QQ-plots with simulation-based confidence intervals, linear regression diagnostics, web scraping, development tools, relative risk and odds
     rati, GARCH(1,1) Forecasting.
-Version: 1.5-9
-Date: 2024-10-18
+Version: 1.5-10
+Date: 2024-11-12
 Depends: roxygen2, mvtnorm, extraDistr
 Imports: stats
 Suggests: bayesGARCH
 RoxygenNote: 7.3.1
 Encoding: UTF-8
 NeedsCompilation: no
-Packaged: 2024-10-18 10:18:32 UTC; ben
+Packaged: 2024-11-12 18:21:26 UTC; ben
 Repository: CRAN
-Date/Publication: 2024-10-18 10:40:36 UTC
+Date/Publication: 2024-11-12 18:40:02 UTC
 Author: Benjamin M. Taylor [aut, cre]

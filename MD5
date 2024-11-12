@@ -1,4 +1,4 @@
-70f5a272149f6ab768743ab3e3e8db3d *DESCRIPTION
+7739442001742f73f110041ea4bafc27 *DESCRIPTION
 12d8ca17bc31edd64e8dca0d1a0f0c33 *NAMESPACE
 ce07383ff7d6d031d7c7d7f9e237c3e3 *R/22tables.R
 3d7ed2a78c4eb4f8c8cd860aa402cca8 *R/EKFadvance.R
@@ -23,9 +23,9 @@ c9d6cee92ff54ed6ce71e1f565000620 *R/roxtext.R
 8346542978c4cbc56740283b511301ca *R/timeop.R
 411f76242c2003cd2968ae9b60304bbf *R/vdc.R
 a1305d02005d460f9cc5537021748d56 *R/zzz.R
-05f05e0029d4e03412dc5ba7437459b5 *build/vignette.rds
+ba181e078a3baf96067d397361216505 *build/vignette.rds
 d920b233a39c1fbbbc967f051c0b9fe1 *inst/doc/miscFuncs.Rtex
-3fee20c53bebc6bd858db3f7810f3612 *inst/doc/miscFuncs.pdf
+1d284cf01b571cd299dd2330c1c5d007 *inst/doc/miscFuncs.pdf
 6c8518292fe10d90e7d89b352486adc8 *inst/templates/KFfit.R
 ee9ec88d62df40ed28a122aae50a9939 *inst/templates/KFparest.R
 0016150d086e233f4d263ab626c48543 *man/EKFadvance.Rd
